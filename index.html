@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switzerland Map with Cantons</title>
+    <link rel="icon" href="favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&subset=latin&display=swap"
+        rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="px-2 pt-5 btn-1" href="https://www.linalopes.info/" target="_blank">by Lina Lopes</a>
+            </div>
+        </nav>
+    </header>
+    <section id="map-section" class="">
+        <div class="container">
+            <h2 class="text-center">Switzerland Milk Production</h2>
+            <p>The interactive charts present data on milk production by canton in Switzerland between 2021 and 2023, highlighting the amount of milk sold in tons (Verkehrsmilch in Tonnen). The visualization provides a detailed comparison between the cantons and their contribution to the country's total milk production, with information provided by TSM Treuhand GmbH.</p>
+            <svg id="map" width="800" height="600" aria-label="Switzerland map with canton boundaries"></svg>
+        </div>
+    </section>
+
+    <!-- Table Section -->
+    <section id="milk-table" class="py-10 py-lg-20">
+        <div class="container">
+            <div class="table-responsive">
+                <table id="data-table" class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Canton</th>
+                            <th>2021</th>
+                            <th>2022</th>
+                            <th>2023</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

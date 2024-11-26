@@ -1,0 +1,126 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@400;700&family=Courier+Prime:wght@400;700&display=swap');
+
+/* Root Variables for Colors */
+:root {
+  --bs-deep-purple: #22113e;
+  --bs-pink: #EA7DFF;
+  --bs-turquoise: #08f2db;
+  --bs-gray-green: #cad8d8;
+
+  /* Default Typography */
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-mono: 'Courier Prime', monospace;
+}
+
+/* General Styles */
+body {
+  font-family: var(--font-body);
+  /* background-color: linear-gradient(135deg, var(--bs-gray-green), var(--bs-turquoise)); */
+  color: var(--bs-deep-purple); /* Default text color */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Heading Styles */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--bs-pink);
+}
+
+h4, h5, h6 {
+  font-family: var(--font-mono);
+  color: var(--bs-turquoise);
+}
+
+/* Link Styles */
+a {
+  color: var(--bs-pink);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--bs-turquoise);
+}
+
+/* Buttons */
+.btn-1 {
+    color: var(--bs-deep-purple);
+    background-color: var(--bs-pink);
+    border-color: var(--bs-pink);
+}
+.btn-1:hover {
+    color: var(--bs-deep-purple);
+    background-color: var(--bs-turquoise);
+    border-color: var(--bs-pink);
+}
+
+/* Styling for the SVG map */
+#map {
+    width: 100%;
+    height: auto;
+}
+
+.canton {
+    fill: var(--bs-gray-green); /* Default color for cantons */
+    stroke: var(--bs-deep-purple); /* Canton boundaries */
+    stroke-width: 0.5;
+    transition: fill 0.3s ease-in-out;
+}
+.canton:hover {
+    fill: var(--bs-turquoise); /* Highlight color on hover */
+}
+
+/* Tooltip Styles */
+#tooltip {
+    position: absolute; /* Makes it float */
+    background-color: var(--bs-gray-green); /* Background matching the map */
+    color: var(--bs-deep-purple); /* Text color */
+    padding: 8px 12px; /* Spacing inside the tooltip */
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+    font-family: var(--font-body); /* Match the body's font */
+    font-size: 14px;
+    pointer-events: none; /* Prevent tooltip from interfering with mouse events */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Adjust tooltip for longer names */
+#tooltip.auto-width {
+    white-space: normal; /* Allow text wrapping */
+    max-width: 200px; /* Limit width for readability */
+    word-wrap: break-word; /* Break long words if necessary */
+}
+
+.bubble {
+    fill: var(--bs-pink);
+    stroke: grey;
+    stroke-width: 0.5px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.bubble:hover {
+    opacity: 1;
+}
+
+.year-bubble {
+    fill: var(--bs-turquoise);
+    /* stroke: var(--bs-deep-purple);
+    stroke-width: 0.5px; */
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.year-bubble:hover {
+    opacity: 1;
+}
+
+.year-label {
+    font-family: var(--font-body);
+    pointer-events: none; /* Ensure text does not interfere with clicks on bubbles */
+}
+
